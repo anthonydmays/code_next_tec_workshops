@@ -1,4 +1,4 @@
-class Calculator {
+class StillBetterCalculator {
   private isOn = false;
   private isScientific = false;
   private result = 0;
@@ -10,29 +10,29 @@ class Calculator {
 
     if (this.isScientific) {
       switch (operation) {
-        case '^':
+        case "^":
           this.doPow(x, y);
           break;
         default:
-          throw new Error('Operation not recognized.');
+          throw new Error("Operation not recognized.");
       }
     }
 
     switch (operation) {
-      case '+':
+      case "+":
         this.doAddition(x, y);
         break;
-      case '-':
-        this.doSubtraction(x, y)
+      case "-":
+        this.doSubtraction(x, y);
         break;
-      case '*':
+      case "*":
         this.doMultiplication(x, y);
         break;
-      case '/':
+      case "/":
         this.doDivision(x, y);
         break;
       default:
-        throw new Error('Operation not recognized.');
+        throw new Error("Operation not recognized.");
     }
   }
 
@@ -60,15 +60,15 @@ class Calculator {
     this.result = x ^ y;
     this.updateDisplay(`${x} ^ ${y} = ${this.result}`);
   }
-  
+
   updateDisplay(text: string) {
     console.log(text);
   }
-  
+
   powerOn() {
     this.isOn = true;
   }
-  
+
   powerOff() {
     this.isOn = false;
   }
